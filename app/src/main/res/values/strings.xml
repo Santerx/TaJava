@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Parci3</string>
+    <string name="usuario">User</string>
+    <string name="producto">Producto</string>
+    <string name="password">Password</string>
+    <string name="precio">Precio</string>
+    <string name="Sigue">Siguiente</string>
+    <string name="Guardar">Guardar</string>
+</resources>
