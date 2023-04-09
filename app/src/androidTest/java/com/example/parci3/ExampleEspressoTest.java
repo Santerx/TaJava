@@ -2,15 +2,12 @@ package com.example.parci3;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
-import android.view.View;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.hamcrest.Matcher;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,16 +17,17 @@ import org.junit.runner.RunWith;
 public class ExampleEspressoTest {
 
     @Rule
-    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class);
-
-    @Test
-    public void testButtonIsDisplayed() {
-        onView(withId(R.id.btn_seguir)).check(matches(isDisplayed()));
-    }
+    public ActivityScenarioRule<MainActivity> mActivityRule = new ActivityScenarioRule(MainActivity.class);
 
     @Test
     public void ButtonIsDisplayed() {
-        onView(withId(R.id.btnCrear)).check(matches(isDisplayed()));
+        //onView(withId(R.id.btnCrear)).check(matches(isDisplayed()));
+        onView(withId(R.id.btnCrear)).perform(click());
+    }
+    @Test
+    public void testButtonIsDisplayed() {
+        //onView(withId(R.id.btn_seguir)).check(matches(isDisplayed()));
+        onView(withId(R.id.btn_seguir)).perform(click());
     }
 
 
