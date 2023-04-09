@@ -14,7 +14,7 @@ import com.example.parci3.db.DbContactos;
 public class Producto extends AppCompatActivity {
 
     private EditText txtProducto, txtPrecio;
-    private Button btnSigue;
+    private Button btnSiguen;
     private Persona persona;
 
     private String usuario;
@@ -26,12 +26,12 @@ public class Producto extends AppCompatActivity {
 
         txtProducto = findViewById(R.id.txtProducto);
         txtPrecio = findViewById(R.id.txtPrecio);
-        btnSigue = findViewById(R.id.btnSigue);
+        btnSiguen = findViewById(R.id.btnSiguen);
 
         persona = (Persona) getIntent().getSerializableExtra("persona");
 
 
-        btnSigue.setOnClickListener(new View.OnClickListener() {
+        btnSiguen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DbContactos dbContactos = new DbContactos(Producto.this);
